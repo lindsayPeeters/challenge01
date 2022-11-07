@@ -5,6 +5,11 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.heading1}>Bookshop</Text>
+      <View style={styles.boek}>
+        <Text>Titel</Text>
+        <Text>By auteur</Text>
+        <Text>ISBN 789-8-2165-1860-1</Text>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -20,4 +25,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: '600',
   },
+  boek:{
+    backgroundColor: '#FF2F35',
+  }
 });
