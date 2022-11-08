@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import Book from './components/book';
 
 export default function App() {
   return (
@@ -9,11 +10,8 @@ export default function App() {
       <Image style={styles.icon} source={require('./assets/shopIcon.png')} />
         <Text style={styles.amount}>1</Text>
       </View>
-      <View style={styles.boek}>
-        <Text style={styles.titleBook}>Dit is de titel van het boek</Text>
-        <Text>By auteur</Text>
-        <Text>Hier komt een korte beschrijving van de biografie van het boek. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </Text>
-        <Text>ISBN 789-8-2165-1860-1</Text>
+      <View style={styles.books}>
+        <Book title={'Titel van het boek'} author={'by auteur'} description={'Hier komt een beschrijving.'} code={'ISBN 1287-9-4563-25-1'}/> 
       </View>
       <StatusBar style="auto" />
     </View>
@@ -54,15 +52,5 @@ const styles = StyleSheet.create({
     paddingTop: 2,
     paddingRight: 7,
     borderRadius: 60,
-  },
-  boek:{
-    backgroundColor: '#FFFFFF',
-    paddingBottom: 20,
-    paddingTop: 20,
-    borderBottomWidth: 3,
-    borderBottomColor: '#000000',
-  },
-  titleBook:{
-    fontSize: 22,
   }
 });
