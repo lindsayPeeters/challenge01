@@ -1,9 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableNativeFeedback } from 'react-native';
+
+function click() {
+    console.log("geklikt");
+  }
 
 const Book = (props) => {
     return (
         <View style={styles.boek}>
-            <Text style={styles.titleBook}>{props.title}</Text>
+            <TouchableNativeFeedback onPress={() => click()}>
+                <Text style={styles.titleBook}>{props.title}</Text>
+            </TouchableNativeFeedback>
             <Text>{props.author}</Text>
             <Text>{props.description}</Text>
             <Text>{props.code}</Text>
@@ -16,7 +22,8 @@ const styles = StyleSheet.create({
         paddingBottom: 20,
         paddingTop: 20,
         borderBottomWidth: 3,
-        borderBottomColor: '#000000',
+        borderColor: '#000000',
+        borderStyle: 'dashed',
       },
       titleBook:{
         fontSize: 22,
