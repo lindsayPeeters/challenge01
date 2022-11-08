@@ -5,7 +5,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.heading1}>Bookshop</Text>
-      <Image source={require('./assets/shopIcon.png')} />
+      <Image style={styles.icon} source={require('./assets/shopIcon.png')} />
       <View style={styles.boek}>
         <Text style={styles.titleBook}>Dit is de titel van het boek</Text>
         <Text>By auteur</Text>
@@ -26,6 +26,11 @@ const styles = StyleSheet.create({
   heading1: {
     fontSize: 32,
     fontWeight: '600',
+  },
+  icon: {
+    height: 35,
+    width: 35,
+    resizeMode: "contain",
   },
   boek:{
     backgroundColor: '#FFFFFF',
