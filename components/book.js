@@ -10,9 +10,9 @@ const Book = (props) => {
             <TouchableOpacity onPress={() => click(props.title)}>
                 <Text style={styles.titleBook}>{props.title}</Text>
             </TouchableOpacity>
-            <Text>{props.author}</Text>
+            <Text style={styles.author}>{props.author}</Text>
             <Text>{props.description}</Text>
-            <Text>{props.code}</Text>
+            <Text style={styles.isbn}>{props.code}</Text>
             <TouchableOpacity style={styles.button} onPress={() => click(props.title)}>
                 <Text style={styles.textButton}>Read</Text>
             </TouchableOpacity>
@@ -30,7 +30,16 @@ const styles = StyleSheet.create({
       },
       titleBook:{
         fontSize: 22,
+        fontWeight: 'bold',
       },
+      author:{
+        fontStyle: "italic",
+        paddingVertical: 5,
+      },
+      isbn:{
+        fontWeight: 'bold',
+        paddingVertical: 5,
+      },    
       button: {
         alignItems: 'center',
         justifyContent: 'space-between',

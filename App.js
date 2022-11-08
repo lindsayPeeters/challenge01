@@ -4,6 +4,7 @@ import Book from './components/book';
 
 export default function App() {
   return (
+    <ScrollView>
     <View style={styles.container}>
       <Text style={styles.heading1}>Bookshop</Text>
       <View style={styles.shopCard}>
@@ -18,6 +19,7 @@ export default function App() {
       </View>
       <StatusBar style="auto" />
     </View>
+    </ScrollView>
   );
 }
 
