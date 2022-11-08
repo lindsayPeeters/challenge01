@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.heading1}>Bookshop</Text>
+      <Image source={require('./assets/shopIcon.png')} />
       <View style={styles.boek}>
         <Text style={styles.titleBook}>Dit is de titel van het boek</Text>
         <Text>By auteur</Text>
@@ -19,7 +20,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     paddingTop: 56,
-    padding: 16,
+    padding: 20,
     backgroundColor: '#fff',  
   },
   heading1: {
@@ -28,7 +29,8 @@ const styles = StyleSheet.create({
   },
   boek:{
     backgroundColor: '#FFFFFF',
-    padding: 20,
+    paddingBottom: 20,
+    paddingTop: 20,
     borderBottomWidth: 3,
     borderBottomColor: '#000000',
   },
