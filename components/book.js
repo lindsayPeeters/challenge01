@@ -12,7 +12,7 @@ const Book = (props) => {
 }
 const styles = StyleSheet.create({
     boek:{
-        backgroundColor: '#FFFFFF',
+        //backgroundColor: '#FFFFFF',
         paddingBottom: 20,
         paddingTop: 20,
         borderBottomWidth: 3,
